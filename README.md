@@ -1,16 +1,39 @@
-# senai
+# 📱 Projeto Final PPDM - Sistema de Monitoramento de Sensores
 
-A new Flutter project.
+## 📋 Pré-requisitos
 
-## Getting Started
+Para rodar este projeto, você precisará de:
 
-This project is a starting point for a Flutter application.
+1.  **Flutter SDK** instalado e configurado.
+2.  **Python 3.10** ou superior.
+3.  **Android Studio** (com Emulador configurado) ou VS Code.
+4.  **Permissão de Desenvolvedor** ativa no Windows (para plugins do Flutter).
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Passo 1: Iniciando o Backend (API)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+O backend é responsável por salvar os dados no banco (SQLite) e fornecer as informações para o aplicativo.
+
+1.  Abra o terminal e entre na pasta `backend`:
+    ```bash
+    cd backend
+    ```
+
+2.  Crie e ative o ambiente virtual (Recomendado para isolar as bibliotecas):
+    * **No Windows:**
+        ```bash
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+
+3.  Instale as dependências do projeto:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  Inicie o servidor:
+    O comando abaixo inicia a API liberando o acesso externo (necessário para o Emulador Android acessar via `10.0.2.2`).
+    ```bash
+    uvicorn main:app --reload
+    ```
